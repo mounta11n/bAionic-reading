@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Bionic Reading App</title>
+<style>
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+b {
+    font-weight: bold;
+}
+
+#outputText {
+    white-space: pre-wrap;
+    max-width: 800px;
+    min-width: 400px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 16px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 8px; /* Space between input and button */
+}
+
+input[type="text"], textarea, button {
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#inputText {
+    width: 100%;
+    min-width: 400px;
+    max-width: 800px;
+    min-height: 350px;
+    max-height: 1000px;
+    resize: vertical;
+}
+
+#submitBtn, #saveApiKeyBtn {
+    margin-top: 10px;
+}
+
+#apiKeyStatus {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#outputText {
+    margin-top: 16px;
+    min-width: 400px;
+    max-width: 800px;
+}
+</style>
+</head>
+<body>
+    <div class="main-container">
+      <h1>AI Bionic Reading App</h1>
+      <div class="input-group">
+        <label for="apiKey">Enter your API key:</label>
+        <input type="text" id="apiKey" placeholder="sk-XYZ... " />
+        <button id="saveApiKeyBtn">Save</button>
+      </div>
+      <div id="apiKeyStatus"></div>
+      <textarea id="inputText" rows="4" cols="50" placeholder="Enter text here..."></textarea><br>
+      <button id="submitBtn">Submit</button>
+      <div id="outputText"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
